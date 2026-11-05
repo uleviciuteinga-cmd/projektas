@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="lt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3efe8">
+  <meta name="description" content="Get Lost Art – autentiški, intuityvūs paveikslai pagal jūsų erdvę ir jau sukurti originalūs meno kūriniai.">
+  <title>Get Lost Art — menas, kuris randa savo vietą</title>
+  <style>
+    :root{--paper:#f3efe8;--ink:#24231f;--muted:#716e66;--rust:#b85f43;--line:#d8d1c6;--olive:#777b5a;--serif:Georgia,'Times New Roman',serif;--sans:Arial,Helvetica,sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5}a{color:inherit;text-decoration:none}button{font:inherit}
+    .wrap{width:min(1180px,calc(100% - 48px));margin:auto}.topbar{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-size:15px;font-weight:800;letter-spacing:.2em}.brand span{display:block;font-size:9px;font-weight:400;letter-spacing:.32em;color:var(--muted);margin-top:3px}.nav{display:flex;gap:32px;font-size:12px;letter-spacing:.08em;text-transform:uppercase}.nav a:hover,.text-link:hover{color:var(--rust)}.menu{display:none;background:none;border:0;font-size:24px}
+    .hero{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center;padding:72px 0 86px}.eyebrow{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--rust);font-weight:700}.hero h1{font:normal clamp(48px,6vw,82px)/.99 var(--serif);letter-spacing:-.045em;margin:22px 0}.hero h1 em{color:var(--rust);font-weight:400}.hero-copy{max-width:460px;color:var(--muted);font-size:15px}.actions{display:flex;gap:14px;align-items:center;margin-top:32px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 22px;background:var(--ink);color:#fff;font-size:11px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--ink);transition:.2s}.btn:hover{background:var(--rust);border-color:var(--rust)}.btn.outline{background:transparent;color:var(--ink)}.btn.outline:hover{color:#fff}.hero-art{position:relative;min-height:510px;background:#d4c6b5;overflow:hidden}.hero-art:before{content:"";position:absolute;width:65%;height:82%;left:15%;top:8%;background:linear-gradient(135deg,#c16c4c 0 20%,#e0a47d 20% 34%,#6d7560 34% 53%,#d5c5a7 53% 69%,#383f38 69%);transform:rotate(-5deg);box-shadow:0 25px 55px #51463844}.hero-art:after{content:"";position:absolute;width:40%;height:35%;right:4%;bottom:4%;background:radial-gradient(ellipse at 30% 50%,#c45c3c 0 20%,transparent 21%),radial-gradient(ellipse at 65% 30%,#e6d3b4 0 28%,transparent 29%),radial-gradient(ellipse at 55% 75%,#69765f 0 35%,transparent 36%);mix-blend-mode:multiply;transform:rotate(14deg)}.art-note{position:absolute;bottom:20px;left:22px;font:italic 13px var(--serif);color:#fff;z-index:2}
+    .intro{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:25px 0;display:flex;justify-content:space-between;gap:24px;color:var(--muted);font:italic 19px var(--serif)}.intro strong{font:700 10px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ink);align-self:center}
+    section{padding:100px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:44px}.section-head h2{font:normal clamp(36px,4vw,56px)/1.05 var(--serif);letter-spacing:-.035em;margin:12px 0 0}.section-head p{max-width:370px;color:var(--muted);font-size:14px;margin:0}.services{display:grid;grid-template-columns:1fr 1fr;gap:18px}.service{padding:34px;background:#e9e3d9;min-height:300px;display:flex;flex-direction:column;justify-content:space-between}.service:nth-child(2){background:#e1e0d5}.num{font:italic 14px var(--serif);color:var(--rust)}.service h3{font:normal 34px var(--serif);margin:34px 0 12px}.service p{color:var(--muted);max-width:430px;font-size:14px}.text-link{font-size:11px;letter-spacing:.13em;text-transform:uppercase;border-bottom:1px solid var(--rust);padding-bottom:6px;align-self:flex-start;margin-top:16px}
+    .process{background:#252720;color:#f3efe8}.process .eyebrow{color:#d18b6c}.process .section-head p{color:#c0bdb4}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}.step{border-top:1px solid #66685d;padding-top:18px}.step b{font:italic 20px var(--serif);color:#d18b6c}.step h3{font:normal 25px var(--serif);margin:22px 0 10px}.step p{font-size:13px;color:#c0bdb4;max-width:290px}
+    .shop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.product-art{height:330px;position:relative;overflow:hidden;background:#d2c7b7}.product-art.one:before{content:"";position:absolute;inset:12% 16%;background:linear-gradient(145deg,#d7a27d 0 23%,#b45c43 23% 42%,#59654f 42% 63%,#e4d6bd 63%);transform:rotate(4deg);box-shadow:0 10px 25px #0002}.product-art.two{background:#c9c8b6}.product-art.two:before{content:"";position:absolute;inset:14% 18%;background:radial-gradient(ellipse at 25% 25%,#b55e42 0 19%,transparent 20%),radial-gradient(ellipse at 70% 35%,#e5b78e 0 26%,transparent 27%),radial-gradient(ellipse at 40% 75%,#59634f 0 34%,transparent 35%),#ded4c1;transform:rotate(-4deg);box-shadow:0 10px 25px #0002}.product-art.three{background:#d7c6b4}.product-art.three:before{content:"";position:absolute;inset:13% 17%;background:linear-gradient(35deg,transparent 0 18%,#4c574a 18% 37%,#d28a65 37% 54%,#eee0c9 54% 68%,#a64f3c 68%);transform:rotate(3deg);box-shadow:0 10px 25px #0002}.product-meta{display:flex;justify-content:space-between;gap:12px;margin-top:15px}.product-meta h3{font:normal 22px var(--serif);margin:0}.product-meta span{font-size:10px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}.product p{font-size:12px;color:var(--muted);margin:8px 0 14px}
+    .manifesto{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:center;background:#e6dfd4;padding:64px}.manifesto h2{font:normal clamp(35px,4vw,54px)/1.05 var(--serif);margin:12px 0}.manifesto p{font:normal 18px/1.6 var(--serif);color:#5e5b53}
+    .contact{padding-bottom:80px}.contact-inner{background:#c16b4e;color:#fff;padding:62px;display:flex;align-items:center;justify-content:space-between;gap:32px}.contact h2{font:normal clamp(38px,5vw,62px)/1 var(--serif);margin:12px 0}.contact p{max-width:450px;color:#f7e8df;font-size:14px}.contact .btn{background:#f3efe8;border-color:#f3efe8;color:#24231f}.contact .btn:hover{background:#24231f;color:#fff;border-color:#24231f}
+    footer{border-top:1px solid var(--line);padding:28px 0 38px;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:11px}.footer-links{display:flex;gap:22px}
+    @media(max-width:760px){.wrap{width:min(100% - 32px,560px)}.topbar{height:68px}.menu{display:block}.nav{display:none;position:absolute;z-index:5;top:68px;left:0;right:0;background:var(--paper);padding:22px 24px;border-bottom:1px solid var(--line);flex-direction:column;gap:18px}.nav.open{display:flex}.hero{grid-template-columns:1fr;gap:34px;padding:54px 0 60px}.hero-art{min-height:390px}.intro{font-size:16px;flex-direction:column}.intro strong{align-self:flex-start}section{padding:72px 0}.section-head{display:block}.section-head p{margin-top:18px}.services,.steps,.shop-grid,.manifesto{grid-template-columns:1fr}.service{min-height:260px}.product-art{height:360px}.manifesto{padding:34px;gap:15px}.contact-inner{padding:38px 28px;display:block}.contact .btn{margin-top:16px}footer{flex-direction:column}.footer-links{flex-wrap:wrap}}
+  </style>
+</head>
+<body>
+  <header class="wrap topbar">
+    <a class="brand" href="#top">GET LOST ART<span>ORIGINAL ART BY INGA ULEVIČIŪTĖ</span></a>
+    <button class="menu" aria-label="Atidaryti meniu" aria-expanded="false" onclick="document.querySelector('.nav').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.nav').classList.contains('open'))">☰</button>
+    <nav class="nav" aria-label="Pagrindinė navigacija">
+      <a href="#paslaugos">Paslaugos</a><a href="#procesas">Procesas</a><a href="#parduotuve">Parduotuvė</a><a href="#apie">Apie</a><a href="#kontaktai">Kontaktai</a>
+    </nav>
+  </header>
+  <main id="top">
+    <div class="wrap hero">
+      <div>
+        <div class="eyebrow">Intuityvi tapyba · Originalūs kūriniai</div>
+        <h1>Menas, kuris<br><em>randa savo</em><br>vietą.</h1>
+        <p class="hero-copy">Kuriu autentiškus, vienetinius paveikslus pagal žmogų, jo istoriją ir erdvę. O jei kūrinys jau laukia savo namų – atrask jį čia.</p>
+        <div class="actions"><a class="btn" href="#paslaugos">Užsakyti paveikslą</a><a class="btn outline" href="#parduotuve">Atrasti kūrinius</a></div>
+      </div>
+      <div class="hero-art" role="img" aria-label="Abstrakti tapybos kompozicija šiltų žemės spalvų"><div class="art-note">Kiekvienas potėpis – nepakartojamas.</div></div>
+    </div>
+    <div class="wrap intro"><span>„Ne užpildyti sieną, o suteikti erdvei charakterį.“</span><strong>Get Lost Art · Inga Ulevičiūtė</strong></div>
+
+    <section class="wrap" id="paslaugos">
+      <div class="section-head"><div><div class="eyebrow">Du būdai atrasti meną</div><h2>Kūrinys pagal tave.<br>Kūrinys, kuris jau yra.</h2></div><p>Originali tapyba prasideda nuo pojūčio, spalvos ar istorijos. Pasirink, kuris kelias šiandien artimesnis.</p></div>
+      <div class="services">
+        <article class="service"><div><div class="num">01 / Individualus užsakymas</div><h3>Paveikslas pagal poreikį</h3><p>Užsakomas kūrinys, kuriamas atsižvelgiant į tavo erdvę, norimą nuotaiką, spalvas ir asmeninę istoriją. Ne kopija, o savarankiškas originalus darbas.</p></div><a class="text-link" href="https://www.instagram.com/behind_the_corner.art/" target="_blank" rel="noreferrer">Aptarkime tavo idėją ↗</a></article>
+        <article class="service"><div><div class="num">02 / Originalių darbų kolekcija</div><h3>Jau nutapyti paveikslai</h3><p>Vienetiniai, jau sukurti darbai, pasiruošę keliauti į naujus namus. Atrask kūrinį, kuris kalba sava kalba ir natūraliai įsilieja į tavo aplinką.</p></div><a class="text-link" href="#parduotuve">Peržiūrėti parduotuvę ↓</a></article>
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">Individualaus užsakymo eiga</div><h2>Nuo pirmo pokalbio<br>iki tavo sienos.</h2></div><p>Kūrybinis procesas – bendras dialogas. Aiškiai susitariame dėl krypties, formato, termino ir biudžeto.</p></div>
+        <div class="steps">
+          <article class="step"><b>01</b><h3>Pasikalbame</h3><p>Aptariame erdvę, matmenis, spalvas, nuotaiką ir tai, ką norėtum jausti žiūrėdamas į kūrinį.</p></article>
+          <article class="step"><b>02</b><h3>Kuriu</h3><p>Gimsta originalus paveikslas. Kiekvienas darbas tapomas individualiai – be tiražavimo ir šablonų.</p></article>
+          <article class="step"><b>03</b><h3>Atkeliauja pas tave</h3><p>Suderiname galutinį rezultatą, pristatymo būdą ir kūrinio kelionę į tavo erdvę.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" id="parduotuve">
+      <div class="section-head"><div><div class="eyebrow">Originalių darbų parduotuvė</div><h2>Jau nutapyti.<br>Pasiruošę naujai istorijai.</h2></div><p>Kiekvienas paveikslas yra vienetinis. Dėl prieinamumo, matmenų, kainos ir pristatymo susisiek tiesiogiai.</p></div>
+      <div class="shop-grid">
+        <article class="product"><div class="product-art one" role="img" aria-label="Abstrakti žemės spalvų kompozicija"></div><div class="product-meta"><h3>Spalvų dialogas</h3><span>Originalas</span></div><p>Abstrakti kompozicija · kūrinio informacija teirautis</p><a class="text-link" href="https://www.instagram.com/behind_the_corner.art/" target="_blank" rel="noreferrer">Klausti apie kūrinį ↗</a></article>
+        <article class="product"><div class="product-art two" role="img" aria-label="Abstrakti organiškų formų kompozicija"></div><div class="product-meta"><h3>Vidinė geografija</h3><span>Originalas</span></div><p>Abstrakti kompozicija · kūrinio informacija teirautis</p><a class="text-link" href="https://www.instagram.com/behind_the_corner.art/" target="_blank" rel="noreferrer">Klausti apie kūrinį ↗</a></article>
+        <article class="product"><div class="product-art three" role="img" aria-label="Abstrakti kontrastingų spalvų kompozicija"></div><div class="product-meta"><h3>Laisvas judesys</h3><span>Originalas</span></div><p>Abstrakti kompozicija · kūrinio informacija teirautis</p><a class="text-link" href="https://www.instagram.com/behind_the_corner.art/" target="_blank" rel="noreferrer">Klausti apie kūrinį ↗</a></article>
+      </div>
+      <p style="font-size:11px;color:var(--muted);margin-top:24px">Pastaba: šiame pradiniame makete rodomos demonstracinės kūrinių kortelės ir abstraktūs vizualai. Prieš publikavimą jas reikia pakeisti tikromis parduodamų paveikslų nuotraukomis, pavadinimais, matmenimis ir kainomis.</p>
+    </section>
+
+    <section class="wrap" id="apie">
+      <div class="manifesto">
+        <div><div class="eyebrow">Apie kūrybą</div><h2>Ne dekoracija.<br>Gyvas santykis.</h2></div>
+        <p>Get Lost Art – Ingos Ulevičiūtės kūrybinė erdvė, kurioje tapyba gimsta iš intuicijos, emocijos ir smalsumo. Man svarbu ne atkartoti tai, kas jau matyta, o sukurti kūrinį, kuris turi savo charakterį, palieka vietos vaizduotei ir keičia erdvės pojūtį.</p>
+      </div>
+    </section>
+
+    <section class="wrap contact" id="kontaktai">
+      <div class="contact-inner"><div><div class="eyebrow" style="color:#f4d6c8">Pradėkime nuo pokalbio</div><h2>Turi sieną.<br>Turi viziją?</h2><p>Parašyk apie savo erdvę, idėją ar kūrinį, kuris patraukė dėmesį. Kartu rasime tinkamą kryptį.</p></div><a class="btn" href="https://www.instagram.com/behind_the_corner.art/" target="_blank" rel="noreferrer">Susisiekti Instagram ↗</a></div>
+    </section>
+  </main>
+  <footer class="wrap"><div>© <span id="year"></span> GET LOST ART · INGA ULEVIČIŪTĖ</div><div class="footer-links"><a href="#paslaugos">Paslaugos</a><a href="#parduotuve">Parduotuvė</a><a href="https://www.instagram.com/behind_the_corner.art/" target="_blank" rel="noreferrer">Instagram ↗</a></div></footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.nav').classList.remove('open')));</script>
+</body>
+</html>
