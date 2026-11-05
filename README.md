@@ -45,3 +45,15 @@ Repzitorijoje yra vieno puslapio „Get Lost Art“ svetainės pradinis varianta
 Puslapis pritaikytas mobiliesiems įrenginiams, o susisiekimo nuorodos veda į Instagram paskyrą [@behind_the_corner.art](https://www.instagram.com/behind_the_corner.art/).
 
 **Prieš viešinant:** demonstracinius paveikslų vizualus ir pavadinimus pakeiskite tikrų darbų nuotraukomis, informacija, matmenimis bei kainomis. Šiuo metu puslapyje nėra mokėjimų ar užsakymų valdymo sistemos.
+## Landing page
+
+Pagrindinis puslapis (`index.html`) pristato „Get Lost Art“ kaip Ingos Ulevičiūtės meninę praktiką ir kūrybinį prekės ženklą.
+
+Puslapio struktūra:
+- menininkės pristatymas ir „Get Lost Art“ idėja;
+- trys kūrybos kryptys: tapyba, fotografija ir performansas;
+- individualių paveikslų užsakymo paslauga;
+- nuoroda į jau sukurtų kūrinių portfolio / parduotuvę;
+- kontaktai ir nuoroda į Instagram paskyrą.
+
+**Prieš publikavimą:** rekomenduojama CSS demonstracinius vizualus pakeisti autentiškomis portfolio fotografijomis, o nuorodas į portfolio ir parduotuvę suderinti su tikrais svetainės puslapiais. Užsakymų forma, atsiskaitymas ir prekių valdymas dar nėra integruoti.
